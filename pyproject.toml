@@ -1,0 +1,17 @@
+[project]
+name = "ml-inference-service"
+version = "1.0.0"
+description = "Versioned predictive-maintenance model training, inference, metrics, and drift monitoring"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["F"]

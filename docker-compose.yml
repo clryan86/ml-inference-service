@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      ARTIFACT_DIR: /app/artifacts
+      DATABASE_PATH: /app/data/inference.db
+      MODEL_VERSION: 1.0.0
+    volumes:
+      - model_artifacts:/app/artifacts
+      - inference_data:/app/data
+volumes:
+  model_artifacts:
+  inference_data:
